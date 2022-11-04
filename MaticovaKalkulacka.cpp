@@ -32,6 +32,7 @@ int main()
 		case 1:
 			//soucet
 			printf("Jeste zadej velikost ctvercove matice: \n");
+			printf("ahoj");
 			scanf("%d", &ZadaniVelikostiCtvercoveMatice);
 
 
