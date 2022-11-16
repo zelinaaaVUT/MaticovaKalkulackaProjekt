@@ -1,8 +1,9 @@
 #pragma once
 
 void UlozeniDoSouboru();
-void NacteniZeSouboru();
+void NacteniZeSouboru(int matice[10][10]);
 void VytvoreniMatice(int velikost, int matice[10][10]);
 void VypsaniMatice(int velikost, int matice[10][10]);
 void SoucetMatic(int velikost, int maticeA[10][10], int maticeB[10][10]);
 void RozdilMatic(int velikost, int maticeA[10][10], int maticeB[10][10]);
+void NasobeniSkalarem(int velikost, int maticeJedna[10][10], int skalar);
