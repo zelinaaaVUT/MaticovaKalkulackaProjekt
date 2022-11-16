@@ -74,7 +74,7 @@ int main()
 		printf("Vypsani matice B: \n");
 		VypsaniMatice(ZadaniVelikostiCtvercoveMatice, maticeB);
 
-		printf("Soucet techto dvou matic je: \n");
+		printf("Rozdil techto dvou matic je: \n");
 		RozdilMatic(ZadaniVelikostiCtvercoveMatice, maticeA, maticeB);
 		break;
 
@@ -92,16 +92,42 @@ int main()
 		printf("Vypsani matice: \n");
 		VypsaniMatice(ZadaniVelikostiCtvercoveMatice, maticeA);
 
-		printf("Soucet techto dvou matic je: \n");
+		printf("Skalar teto matice je: \n");
 		NasobeniSkalarem(ZadaniVelikostiCtvercoveMatice, maticeA, skalar);
 		break;
 
 	case 4:
 		//nasobeni dvou matic
+		printf("Jeste zadej velikost ctvercove matice 3 - 3x3, 4-4x4 atd: \n");
+		printf("Input: ");
+		scanf("%d", &ZadaniVelikostiCtvercoveMatice);
+
+		VytvoreniMatice(ZadaniVelikostiCtvercoveMatice, maticeA);
+		printf("Vypsani matice A: \n");
+		VypsaniMatice(ZadaniVelikostiCtvercoveMatice, maticeA);
+
+
+		VytvoreniMatice(ZadaniVelikostiCtvercoveMatice, maticeB);
+		printf("Vypsani matice B: \n");
+		VypsaniMatice(ZadaniVelikostiCtvercoveMatice, maticeB);
+
+		printf("Soucin techto dvou matic je: \n");
+		NasobeniMatic(ZadaniVelikostiCtvercoveMatice, maticeA, maticeB);
 		break;
 
 	case 5:
 		//determinant
+		printf("Jeste zadej velikost ctvercove matice 3 - 3x3, 4-4x4 atd: \n");
+		printf("Input: ");
+		scanf("%d", &ZadaniVelikostiCtvercoveMatice);
+
+		VytvoreniMatice(ZadaniVelikostiCtvercoveMatice, maticeA);
+		printf("Vypsani matice A: \n");
+		VypsaniMatice(ZadaniVelikostiCtvercoveMatice, maticeA);
+
+		printf("Determinant teto matice je: \n");
+		DeterminantMatice(ZadaniVelikostiCtvercoveMatice, maticeA);
+
 		break;
 
 	case 6:
