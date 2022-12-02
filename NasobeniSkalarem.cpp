@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "MaticeHeader.h"
 
 void NasobeniSkalarem(int velikost, int maticeJedna[10][10], int skalar) {
 	int i, j;
@@ -10,10 +11,6 @@ void NasobeniSkalarem(int velikost, int maticeJedna[10][10], int skalar) {
 		}
 	}
 
-	for (i = 0; i < velikost; i++) {
-		for (j = 0; j < velikost; j++) {
-			printf("%d ", suma[i][j]);
-		}
-		printf("\n");
-	}
+	VypsaniMatice(velikost, suma);
+	UlozeniDoSouboru(velikost, suma);
 }

@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include "MaticeHeader.h"
 
 
 void VytvoreniMatice(int velikost, int matice[10][10]) {
@@ -12,5 +12,6 @@ void VytvoreniMatice(int velikost, int matice[10][10]) {
 			scanf("%d", &matice[i][j]);
 		}
 	}
+
 	return;
 }

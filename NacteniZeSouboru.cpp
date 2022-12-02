@@ -24,7 +24,6 @@ int NacteniZeSouboru(int PoradiMaticeVSouboru,int matice[10][10]) {
 		if (radek == PoradiMaticeVSouboru) {
 
 			fgets(buffer, MAX_LINE, fptr);
-			//printf("%s", buffer);
 			break;
 		}
 
@@ -37,19 +36,21 @@ int NacteniZeSouboru(int PoradiMaticeVSouboru,int matice[10][10]) {
 	}
 
 	int k = 0, l = 0;
-	char nic[MAX_LINE];
+	char *nic[25];
+	const char s[2] = ",";
+	char* token;
 
+	token = strtok(buffer, s);
 
-	for (int znak = 0; znak < strlen(buffer); znak++) {
-		if (buffer[znak] != ',') {
-			nic[k] = buffer[znak];
-			k++;
-		}
+	while (token != NULL) {
+		nic[k] = token;
+		token = strtok(NULL, s);
+		k++;
 	}
 
 	for (int i = 0; i < velikost; i++) {
 		for (int j = 0; j < velikost; j++) {
-			matice[i][j] = (nic[l] - '0');
+			matice[i][j] = atoi(nic[l]);
 			l++;
 		}
 	}
