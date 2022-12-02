@@ -21,7 +21,7 @@ int NacteniZeSouboru(int PoradiMaticeVSouboru,int matice[10][10]) {
 	fscanf(fptr, "%d,", &velikost);
 	while (!feof(fptr)) {		
 
-		if (radek == PoradiMaticeVSouboru) {
+		if (radek == PoradiMaticeVSouboru) { //pokud hledany radek se shoduje s radkem v souboru tak nacte radek do promenne buffer
 
 			fgets(buffer, MAX_LINE, fptr);
 			break;
@@ -29,7 +29,7 @@ int NacteniZeSouboru(int PoradiMaticeVSouboru,int matice[10][10]) {
 
 		c = getc(fptr);
 
-		if (c == '\n') {
+		if (c == '\n') { //dorazil na konec radku
 			radek++;
 			fscanf(fptr, "%d,", &velikost);
 		}
@@ -40,17 +40,17 @@ int NacteniZeSouboru(int PoradiMaticeVSouboru,int matice[10][10]) {
 	const char s[2] = ",";
 	char* token;
 
-	token = strtok(buffer, s);
+	token = strtok(buffer, s); //strtok rozdeli buffer podle carek
 
 	while (token != NULL) {
-		nic[k] = token;
+		nic[k] = token;       //nahravam rozdelene cisla do pomocne promenne
 		token = strtok(NULL, s);
 		k++;
 	}
 
 	for (int i = 0; i < velikost; i++) {
 		for (int j = 0; j < velikost; j++) {
-			matice[i][j] = atoi(nic[l]);
+			matice[i][j] = atoi(nic[l]);  //nacitam jednotlive cisla do matice; atoi zmeni string na int
 			l++;
 		}
 	}

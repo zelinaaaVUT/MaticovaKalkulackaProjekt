@@ -18,11 +18,11 @@ void UlozeniDoSouboru(int velikost, int matice[10][10]) {
 	for (int i = 0; i < velikost; i++) {
 		for (int j = 0; j < velikost; j++) {
 			runda++;
-			if (runda == (velikost * velikost)) {
+			if (runda == (velikost * velikost)) { //v souboru nechci mit na konci radku carku
 				fprintf(fptr, "%d", matice[i][j]);
 			}
 			else {
-				fprintf(fptr, "%d,", matice[i][j]);
+				fprintf(fptr, "%d,", matice[i][j]); //zapis cisla s carkou (oddelovacem mezi cislama)
 			}		
 		}
 	}

@@ -28,7 +28,7 @@ int main()
 		"4 - Nasobeni dvou matic\n"
 		"5 - Vypocitani determinantu matice\n"
 		"6 - Vypocitani transponovane matice\n"
-		"7 - pro ukonceni a ulozeni\n"
+		"7 - pro ukonceni\n"
 		"8 - vypsani matic v souboru pro info dale pro nacteni ze souboru\n");
 	printf("Input: ");
 	scanf("%d", &input);

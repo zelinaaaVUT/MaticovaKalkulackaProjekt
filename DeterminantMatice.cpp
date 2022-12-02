@@ -2,7 +2,7 @@
 
 void DeterminantMatice(int velikost, int maticeJedna[10][10]) {
 	long vysledek;
-
+	//v zadani mam uvedene pocitat determinant max do velikosti 4, jsou to algoritmy pro pocitani determinantu
 	if (velikost == 2) {
 		vysledek = maticeJedna[0][0] * maticeJedna[1][1] - maticeJedna[0][1] * maticeJedna[1][0];
 		printf("%ld", vysledek);
